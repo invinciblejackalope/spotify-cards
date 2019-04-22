@@ -1,0 +1,83 @@
+:root {
+  --green: #1DB954;
+  --gray: #AAAAAA;
+  --dark-gray: #333333;
+}
+
+body {
+  font-family: "Georgia";
+  background-color: black;
+  color: white;
+}
+
+img {
+  border-style: solid;
+  border-color: var(--gray);
+}
+
+h3 {
+  margin: 5px 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--gray);
+}
+
+#card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-box {
+  background-color: black;
+  border-style: solid;
+  border-color: var(--dark-gray);
+  border-radius: 20px;
+  margin: 10px;
+  text-align: center;
+  transition: .25s ease-in-out;
+}
+
+.card-box:hover {
+  border-color: var(--green);
+  background-color: var(--dark-gray);
+  padding: 5px;
+}
+
+.half {
+  width: 47%;
+}
+
+.attr-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.attr-box {
+  margin: 5px 0px;
+  width: 50%;
+}
+
+.attr-box-2 {
+  margin: 5px;
+  width: 100%;
+}
+
+input[id^='check'] {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+input[id^='check']:checked ~ .hide {
+  display: block;
+}

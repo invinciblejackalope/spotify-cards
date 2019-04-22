@@ -1,0 +1,62 @@
+<head>
+{% load static %}
+<link rel='stylesheet' type='text/css' href="{% static 'cards/index.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="{% static 'cards/index.js' %}"></script>
+<link rel='icon' href='https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-download-logo-30.png'>
+<title> Spotify - New Releases </title>
+</head>
+
+<body>
+<div id=card-list>
+{% if card_list %}
+  {% for card in card_list %}
+    <div class="card-box half">
+    <h2> <a href='{{ card.external_urls.spotify }}'>{{ card.name|title }}</a> </h2>
+    <a href='{{ card.external_urls.spotify }}'> <img src='{{ card.images.1.url }}' /> </a>
+      <div class=attr-list>
+        <div class=attr-box-2>
+          <h3>
+          {% if card.artists|length == 1 %}
+            Artist:
+          {% else %}
+            Artists:
+          {% endif %}
+          {% for artist in card.artists %}
+            {% if forloop.last %}
+              <a href='{{ artist.external_urls.spotify }}'>{{ artist.name }}</a>
+            {% else %}
+              <a href='{{ artist.external_urls.spotify }}'>{{ artist.name }}</a>,
+            {% endif %}
+          {% endfor %}
+          </h3>
+        </div>
+        <div class=attr-box> Type: {{ card.album_type }} </div>
+        {% if card.total_tracks == 1 %}
+          <div class=attr-box> {{ card.total_tracks }} track </div>
+        {% else %}
+          <div class=attr-box> {{ card.total_tracks }} tracks </div>
+        {% endif %}
+        <div class=attr-box> Released {{ card.release_date }} </div>
+        <div class=attr-box> Accurate to the {{ card.release_date_precision }} </div>
+        <div class=attr-box-2>
+          <input type=checkbox id='check {{ card.id }}' />
+          <label for='check {{ card.id }}'> <a> Countries available (click to show) </a> </label>
+          <div class=hide>
+          {% for market in card.available_markets %}
+            {% if forloop.last %}
+              {{ market }}
+            {% else %}
+              {{ market }},
+            {% endif %}
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% else %}
+  <p> Didn't get any data from the Spotify API. Perhaps the developer of this site is at fault. </p>
+{% endif %}
+</div>
+</body>
