@@ -1,6 +1,8 @@
 # spotify-cards
 CSC 630 Design Challenge 4
 
+This website pulls the top 20 New Releases from the Spotify API and displays them as cards with a title, an image (which both link to the album/single on Spotify), a list of artists (which link to the individual artist pages on Spotify), and various other details.
+
 The sources I used include the following.
 Tutorials:
 https://developer.spotify.com/documentation/web-api/quick-start/
