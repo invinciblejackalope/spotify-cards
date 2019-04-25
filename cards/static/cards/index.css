@@ -50,6 +50,8 @@ a:hover {
   padding: 5px;
 }
 
+/* to adjust the way the boxes are distributed if the screen is very small. see
+also index.html and index.js */
 .half {
   width: 47%;
 }
@@ -70,6 +72,7 @@ a:hover {
   width: 100%;
 }
 
+/* hidden check box thing. see index.html */
 input[id^='check'] {
   display: none;
 }

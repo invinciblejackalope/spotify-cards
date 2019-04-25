@@ -2,6 +2,8 @@
 {% load static %}
 <link rel='stylesheet' type='text/css' href="{% static 'cards/index.css' %}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- this script is to change the way the boxes are distributed if the screen is
+very small. see also index.css -->
 <script src="{% static 'cards/index.js' %}"></script>
 <link rel='icon' href='https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-download-logo-30.png'>
 <title> Spotify - New Releases </title>
@@ -40,6 +42,9 @@
         <div class=attr-box> Released {{ card.release_date }} </div>
         <div class=attr-box> Accurate to the {{ card.release_date_precision }} </div>
         <div class=attr-box-2>
+          <!-- this what I used to do the "countries available" click-to-open
+          thing - it's a trick I found out online where you can use a check
+          box but hide the actual check box. see also index.css -->
           <input type=checkbox id='check {{ card.id }}' />
           <label for='check {{ card.id }}'> <a> Countries available (click to show) </a> </label>
           <div class=hide>

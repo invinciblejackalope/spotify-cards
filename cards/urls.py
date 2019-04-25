@@ -3,5 +3,6 @@ from . import views
 
 app_name = "cards"
 urlpatterns = [
+    # not very exciting I know
     path('', views.index, name='index'),
 ]

@@ -1,6 +1,8 @@
 from django.db import models
 
 
+# this is how I store the access token on the server (so I don't have to query
+# the server for a new one until this one expires)
 class AccessToken(models.Model):
     token = models.CharField(max_length=1000)
 
