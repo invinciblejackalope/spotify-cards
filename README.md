@@ -3,6 +3,15 @@ CSC 630 Design Challenge 4
 
 This website pulls the top 20 New Releases from the [Spotify API](https://api.spotify.com) and displays them as cards with a title, an image (which both link to the album/single on Spotify), a list of artists (which link to the individual artist pages on Spotify), and various other details.
 
+I removed the authentication information from the code, so in order to run it, one would need the file `cards/config.json` with the following:
+```
+{
+  "client_id": "",
+  "client_secret": "",
+  "refresh_token": ""
+}
+```
+
 The sources I used include the following.
 
 Tutorials:
