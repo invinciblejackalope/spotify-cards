@@ -57,3 +57,6 @@ https://stackoverflow.com/questions/30313314/django-how-to-include-javascript-in
 https://stackoverflow.com/questions/1875852/how-can-i-define-colors-as-variables-in-css
 https://stackoverflow.com/questions/4888377/how-to-add-a-browser-tab-icon-favicon-for-a-website
 https://stackoverflow.com/questions/20199126/reading-json-from-a-file
+https://stackoverflow.com/questions/52704/how-do-i-discard-unstaged-changes-in-git
+https://stackoverflow.com/questions/6245570/how-to-get-the-current-branch-name-in-git
+https://stackoverflow.com/questions/6919121/why-are-there-two-ways-to-unstage-a-file-in-git
