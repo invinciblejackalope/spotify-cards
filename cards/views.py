@@ -8,10 +8,13 @@ from .models import AccessToken
 import requests, base64, json
 
 
-client_id = '5833fa476edc482a90dcd28dafc05774'
-client_secret = '451f5e8f4a1d4112928337b6325094aa'
+with open('cards/config.json') as f:
+    config = json.load(f)
+
+client_id = config['client_id']
+client_secret = config['client_secret']
 auth_str = base64.b64encode((client_id + ':' + client_secret).encode('ascii')).decode('ascii')
-refresh_token = 'AQDTHsM2ronafQal1cDOyDRx_mwz1_vAdYeKGcq2ob9JTSEgC9zSFt1yvaMjupCWRFJZ9VS4m0OUofwgwBbpCMD2r5-MlL57Pnosr_f-Lo9fYB8KLl_0ax3efKRn6m2470vYrA'
+refresh_token = config['refresh_token']
 
 
 def index(request):

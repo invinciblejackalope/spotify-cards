@@ -10,6 +10,7 @@ https://developer.spotify.com/documentation/web-api/quick-start/
 http://docs.python-requests.org/en/master/
 https://bavotasan.com/2011/a-simple-fade-with-css3/
 https://www.digitalocean.com/community/tutorials/an-introduction-to-jquery
+https://help.github.com/en/articles/ignoring-files
 
 Documentation:
 https://docs.python.org/2/library/base64.html
@@ -46,3 +47,4 @@ https://stackoverflow.com/questions/18477016/switching-css-classes-based-on-scre
 https://stackoverflow.com/questions/30313314/django-how-to-include-javascript-in-template
 https://stackoverflow.com/questions/1875852/how-can-i-define-colors-as-variables-in-css
 https://stackoverflow.com/questions/4888377/how-to-add-a-browser-tab-icon-favicon-for-a-website
+https://stackoverflow.com/questions/20199126/reading-json-from-a-file
